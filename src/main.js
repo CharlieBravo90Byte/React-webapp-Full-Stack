@@ -1,20 +1,19 @@
-//variables que se puede cambiar
-let firstname = 'Carlos';
-//Cambiar variable
-firstname = 'Charlie';
 
 
-//Constante fijas q no se puede renombrar como let
-const lastname = 'Bravo';
+function sayHello(name = 'Abraham', age = 23) {
+  //console.log('Hola mundo function');
 
-const condicion = true;
-if (condicion){
-    firstname = 'Abraham'; // se puede declarar nuevamente con let ya q es indiferente y solo dentro del if
-    console.log(firstname);
-} 
+  const greeting = `Hola mundo function ${name} edad: ${age}`;
 
-//Log para la consola del navegador
-console.log("Hello world!!! " + firstname +' '+lastname);
+  return greeting;
 
-//template string
-console.log(`Hello world!!! ${firstname} ${lastname}`);  // ` con alt 96 o alt }
+ //console.log('Hola mundo function');
+
+ /*const greeting = 'Hola mundo function';
+ return greeting;*/
+}
+
+
+const result = sayHello('Carlos', 30);
+
+console.log(result);
