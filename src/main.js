@@ -1,19 +1,11 @@
 
 
-function sayHello(name = 'Abraham', age = 23) {
-  //console.log('Hola mundo function');
-
-  const greeting = `Hola mundo function ${name} edad: ${age}`;
-
-  return greeting;
-
- //console.log('Hola mundo function');
-
- /*const greeting = 'Hola mundo function';
- return greeting;*/
-}
+const sayHello =(name = 'Abraham', age = 23) => 
+    `Hello world!!! ${name} ${age}`;
+const add = (a = 0, b = 0) => a + b;
 
 
 const result = sayHello('Carlos', 30);
 
 console.log(result);
+console.log(add(2, 3));
