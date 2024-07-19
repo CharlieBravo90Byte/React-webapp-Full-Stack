@@ -47,19 +47,32 @@ const invoice = {
     }
 };
 
-//const invoice2 = invoice;
-const invoice2 = { ...invoice };
+// Se puede cambiar el valor de las propiedades
+invoice.id = 20;
+invoice.client.name = 'Charlie';
 
-const result = invoice === invoice2;
+console.log(invoice);
 
-if (result) {
-    console.log(result);
-}
-else {
-    console.log('No son iguales');
-}    
+const greeting = invoice.greeting();
+console.log(greeting);
 
-invoice2.id = 20;
+console.log(invoice.total());
 
-console.log(invoice.id);
-console.log(invoice2.id);
+/*
+// Accessing object properties
+console.log(invoice.id); // Output: John
+console.log(invoice.name); // Output: 30
+console.log(invoice.date); // Output: Developer
+
+// Modifying object properties
+invoice.name = 35;
+console.log(invoice.name); // Output: 35
+
+// Adding new properties to an object
+invoice.location = "New York";
+console.log(invoice.location); // Output: New York
+
+// Deleting a property from an object
+delete invoice.date;
+console.log(invoice.date); // Output: undefined
+*/
