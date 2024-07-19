@@ -1,19 +1,29 @@
 
-const average = 5.9;
+const products = ['mesa','silla', 'notebook','teclado'];
 
-const status2 = (average >= 5.5)? 'Aprobado': 'Rechazado';
+products.push('pantalla lcd', 'sony tv');
+
+console.log(products);
 
 
-console.log(`Resultado ${status2}`);
+// existen dos versiones para implementar
+// 1 
+products.forEach(function(el) {
+    console.log(el);
+});
+
+//2 
+products.forEach(el => console.log(el));
 
 
-let max = 0;
+for(const product of products){
+    console.log(product);
+};
 
-const a = 5;
-const b = 10;
-const c = 15;
 
-max = a > b ? a : b;
-max = max > c ? max : c;
+for(let i = 0; i < products.length; i++) {
+    const element = products[i];
+    console.log(products[i]);
+}
 
-console.log(`Max ${max}`);
+console.log(products[0]);
