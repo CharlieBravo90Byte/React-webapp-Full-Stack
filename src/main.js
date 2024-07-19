@@ -1,65 +1,19 @@
-// Creating an object
-const invoice = {
-    id: 10,
-    name: 'Compras de oficina',
-    date: new Date(),
-    client: {
-        id:2,
-        name: 'John',
-        lastName: 'Doe',
-        age:20,
-    },
-    items: [
-        { 
-            id: 1, 
-            name: 'lapices', 
-            price: 500,
-            quantity:2, 
-        },
-        { 
-            id: 2, 
-            name: 'borradores', 
-            price: 100,
-            quantity:3, 
-        },
-        { 
-            id: 3, 
-            name: 'cuadernos', 
-            price: 200,
-            quantity:10,
-        }
 
-    ],
+const average = 5.9;
 
-    //total: 1000,
+const status2 = (average >= 5.5)? 'Aprobado': 'Rechazado';
 
-    total: function() {
-        let total = 0;
 
-        this.items.forEach(item => {
-            total = total +item.price * item.quantity;
-        });
-        return total;
-    },
+console.log(`Resultado ${status2}`);
 
-    greeting: function() { 
-        return `Hola ${invoice.client.name} ${invoice.client.lastName}`; 
-    }
-};
 
-//const invoice2 = invoice;
-const invoice2 = { ...invoice };
+let max = 0;
 
-const result = invoice === invoice2;
+const a = 5;
+const b = 10;
+const c = 15;
 
-if (result) {
-    console.log(result);
-}
-else {
-    console.log('No son iguales');
-}    
+max = a > b ? a : b;
+max = max > c ? max : c;
 
-invoice2.id = 20;
-
-console.log(invoice.id);
-console.log(invoice2.id);
+console.log(`Max ${max}`);
