@@ -1,11 +1,30 @@
+// Creating an object
+const invoice = {
+    id: 10,
+    name: 'Compras de oficina',
+    date: new Date(),
+    client: 'Google',
+    total: 1000,
+};
 
+// Se puede cambiar el valor de las propiedades
+invoice.id = 20;
 
-const sayHello =(name = 'Abraham', age = 23) => 
-    `Hello world!!! ${name} ${age}`;
-const add = (a = 0, b = 0) => a + b;
+console.log(invoice);
 
+// Accessing object properties
+console.log(invoice.id); // Output: John
+console.log(invoice.name); // Output: 30
+console.log(invoice.date); // Output: Developer
 
-const result = sayHello('Carlos', 30);
+// Modifying object properties
+invoice.name = 35;
+console.log(invoice.name); // Output: 35
 
-console.log(result);
-console.log(add(2, 3));
+// Adding new properties to an object
+invoice.location = "New York";
+console.log(invoice.location); // Output: New York
+
+// Deleting a property from an object
+delete invoice.date;
+console.log(invoice.date); // Output: undefined
